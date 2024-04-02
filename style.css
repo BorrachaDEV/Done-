@@ -1,0 +1,127 @@
+:root{
+    --color-dark:#1b1b1b;
+    --color-white:#fff;
+}
+*{
+    background-color: var(--color-dark);
+    color:var(--color-white);
+    font-family: "Libre Baskerville", serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 16px;
+}
+h2{
+    text-align: center;
+    gap: 10px;
+}
+#hours, #minutes, #seconds {
+    width: 235px;
+    height: 200px;
+}
+
+.clock{
+    display: flex;
+    gap: 50px;
+
+}
+.clock span{
+    font-size: 150px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.clock span:not(:last-child):after{
+    content: ':';
+    margin-bottom: 25px;
+}
+#todo-input{
+    
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 100%;
+    background: none;
+    border: 2px solid var(--color-white);
+    border-radius: 1000px;
+    font: "Libre Baskerville";
+    color: var(--color-white);
+    caret-color: var(--color-white);
+}
+#todo-input:focus{
+    outline: none;
+}
+form{
+    position: relative;
+}
+#add-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--color-white);
+    height: 100%;
+    padding: 0 30px;
+    border: none;
+    border-radius:1000px;
+    font:"Libre Baskerville";
+    font-weight: 600;
+    color: var(--color-dark);
+    cursor: pointer;
+}
+.todo{
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: var(--color-dark);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.todo .todo-text{
+    transition: 200ms ease;
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    background-color: var(--color-dark);
+}
+.delete-button{
+    padding: 3px;
+    background-color: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.delete-button svg{
+    transition: 200ms ease;
+}
+.delete-button:hover svg{
+    fill: red;
+}
+.custom-checkbox{
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked ~.custom-checkbox{
+    background-color: var(--color-white);
+} 
+input[type="checkbox"]:checked ~.custom-checkbox{
+    fill:var(--color-white);
+}
+input[type="checkbox"]{
+    display: none;
+}
