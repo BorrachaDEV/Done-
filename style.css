@@ -61,20 +61,21 @@ form{
 }
 #add-button{
     position: absolute;
-    top: 0;
-    right: 0;
-
+    top: 72%;
+    right: 1px;
+    transform: translateY(-50%);
     background-color: var(--color-white);
-    height: 100%;
-    padding: 0 30px;
+    height: 40px;
+    padding: 0 15px;
     border: none;
-    border-radius:1000px;
-    font:"Libre Baskerville";
+    border-radius: 1000px;
+    font: "Libre Baskerville";
     font-weight: 600;
     color: var(--color-dark);
     cursor: pointer;
 }
 .todo{
+    position: relative;
     margin-bottom: 10px;
     padding: 0 16px;
     background-color: var(--color-dark);
@@ -124,4 +125,15 @@ input[type="checkbox"]:checked ~.custom-checkbox{
 }
 input[type="checkbox"]{
     display: none;
+}
+.todotime{
+    color:#1b1b1b;
+    border: 2px solid var(--color-white);
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+
 }
