@@ -59,21 +59,6 @@ h2{
 form{
     position: relative;
 }
-#add-button{
-    position: absolute;
-    top: 72%;
-    right: 1px;
-    transform: translateY(-50%);
-    background-color: var(--color-white);
-    height: 40px;
-    padding: 0 15px;
-    border: none;
-    border-radius: 1000px;
-    font: "Libre Baskerville";
-    font-weight: 600;
-    color: var(--color-dark);
-    cursor: pointer;
-}
 .todo{
     position: relative;
     margin-bottom: 10px;
@@ -132,8 +117,29 @@ input[type="checkbox"]{
     margin-bottom: 10px;
     padding: 0 16px;
     background-color: var(--color-white);
-    border-radius: 15px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+    height: 40px;
 
+}
+#add-button{
+    position: absolute; 
+    right:1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+    height: 44px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 26px;
+    font: "Libre Baskerville";
+    font-weight: 600;
+    color: var(--color-dark);
+    cursor: pointer;
 }
